@@ -1,0 +1,355 @@
+
+.pressable {
+  /* Initial box shadow for depth */
+  box-shadow: 3px 3px #181616;
+  /* Transition for the shadow and transform properties for smooth animation */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pressable:hover, .pressable:focus {
+  /* Smaller shadow to give a "pressed" effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Slightly scale down the element to simulate pressing */
+  transform: translateY(2px);
+}
+
+.tag {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid #000;
+    border-radius: 99999px;
+    padding: .5rem .75rem;
+    font-size: .875rem;
+    line-height: 1;
+    transition: all .14s cubic-bezier(.25, .46, .45, .94);
+    display: inline-block;
+  }
+  
+.tag-move:hover {
+    transform: translate(-.25rem, -.25rem);
+    box-shadow: 3px 3px #181616;
+    background-image: url("data:image/svg+xml,%3C!-- svg: first layer --%3E%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+
+  }
+  
+  /* Tag with Color Change on Hover */
+.tag-color-change:hover {
+    background-color: #980808; /* Change to your desired hover background color */
+    color: var(--white); /* Change text color if needed */
+  }
+
+
+.card-wrap {
+    width: 100%;
+    color: var(--black);
+    border: 2px solid #000;
+
+    flex-direction: column;
+    transition: all .14s ;
+    display: flex;
+    overflow: hidden;
+    width: 50%;
+
+    
+
+  }
+
+
+.noise3{
+	background-image: url("data:image/svg+xml,%3C!-- svg: first layer --%3E%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.card-wrap-move:hover {
+  box-shadow: 6px 6px #181616;
+  transform: translate(-10px, -10px);
+  transition: all .14s ;
+
+}
+
+
+
+  
+.card-wrap.pink-shadow {
+    background-color: var(--white);
+  }
+  
+.card-wrap.pink-shadow:hover {
+    box-shadow: 4px 4px 0 0 var(--pink);
+  }
+  
+.card-thumbnail {
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid var(--black);
+    display: block;
+  }
+.card-content {
+    flex-direction: column;
+    flex: 1;
+    border-top: 2px solid black;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    align-items: stretch;
+    padding: 1.5rem;
+    display: flex;
+  }
+  
+.card-content.blog {
+    grid-column-gap: 0px;
+    grid-row-gap: 2rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    align-items: start;
+    padding: 2rem 2.5rem;
+    display: grid;
+  }
+
+
+  .menu-button {
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: auto;
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .menu-button.w--open {
+    border-left: 2px solid var(--black);
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+
+
+
+  
+  /* CSS */
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: move; /* Gives a visual cue that the item is movable */
+}
+
+.box h2 {
+  margin-top: 0;
+}
+
+
+/* CSS */
+.accordion {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.accordion-title {
+  display: block;
+  padding: 15px;
+  margin: 0;
+  font-size: 30px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-top: 2px solid black;
+
+}
+
+.accordion-title:hover {
+  opacity: .7;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+  display: grid;
+
+}
+
+
+/* Hide the checkboxes */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Show content when checkbox is checked */
+input[type="checkbox"]:checked + .accordion-title + .accordion-content {
+  max-height: 1000px; /* A large max-height to accommodate content */
+}
+
+/* Optional: Add some styles for the label when the checkbox is checked */
+input[type-checkbox]:checked + .accordion-title {
+  color: #333;
+}
+
+
+
+
+/* CSS */
+/* Style the dropdown button */
+.dropbtn {
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  background-color: white;
+  flex-direction: column;
+}
+.round{
+  border-radius: .375rem;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown, .dropup {
+  position: relative;
+  display: inline-block;
+  border: 2px solid var(--black);
+  color: var(--black);
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content, .dropup-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  border: 2px solid black;
+  color: var(--black);
+  box-shadow: 3px 3px #181616;
+
+}
+
+/* Dropup content position */
+.dropup-content {
+  bottom: 100%; /* Position it at the bottom of the button */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a, .dropup-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border: 2px solid var(--black);
+  
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover, .dropup-content a:hover {
+  background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content, .dropup:hover .dropup-content {
+  display: block;
+  
+}
+
+
+.box-move:hover {
+  box-shadow: 6px 6px #181616;
+  transform: translate(-10px, -10px);
+  transition: all .14s ;
+
+}
+
+.inline-newsletter-grid {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 5rem;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.form-submit-btn {
+  background-color: var(--pink);
+  color: var(--black);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.form-submit-btn.arrow {
+  border-left: 2px solid var(--black);
+  background-color: var(--pink);
+  color: var(--black);
+  padding: .1rem .5rem .5rem;
+  font-size: 1.75vw;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+
+/* window pane and just general dialogue boxes*/
+
+
+.anchor-animate {
+  text-decoration: none; /* Removes default underline */
+  position: relative; /* Needed for positioning the pseudo-element */
+  display: inline-block; /* Ensures the underline fits the text */
+}
+
+.anchor-animate::after {
+  content: '';
+  position: absolute;
+  width: 0; /* Start with no width */
+  height: 2px; /* Thickness of the underline */
+  bottom: 0; /* Position at the bottom of the text */
+  left: 50%; /* Start from the middle */
+  background-color: black; /* Color of the underline */
+  transition: width 0.5s ease, left 0.5s ease; /* Smooth transition for width and position */
+}
+
+.anchor-animate:hover::after {
+  width: 100%; /* Full width on hover */
+  left: 0; /* Start from the left edge */
+}
+
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.w-slider-dot {
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+  background-color: rgba(215, 14, 219, 0.4);
+  transition: background-color .1s, color .1s;
+  display: inline-block;
+  position: relative;
+  -webkit-appearance: none; /* Remove default radio button styling */
+  appearance: none;
+  outline: none; /* Remove default focus outline */
+}
+
+.w-slider-dot:checked {
+  background-color: black;
+}
+
+.w-slider-dot:focus {
+  box-shadow: 0 0 0 2px #ede7e7;
+  background-color: black;
+}
+
+.w-slider-dot:focus:checked {
+  box-shadow: none;
+  background-color: black;
+}
+
+
+
+/* css for code block also use highlight js*/ 
+
+
