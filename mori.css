@@ -55,6 +55,14 @@ pre, code {
   border: solid 1px rgba(110,118,129,0.4);
 }
 
+highlight {
+  display: inline-block;
+  padding: 8px 8px;
+  line-height: 10px;
+  vertical-align: middle;
+  background-color: rgb(255, 209, 224);
+}
+
 
 /*Adding some typography */
 .pressable {
@@ -124,10 +132,6 @@ pre, code {
 }
 
 
-
-
-  
-
   
 .card-thumbnail {
     width: 100%;
@@ -157,9 +161,6 @@ pre, code {
     padding: 2rem 2.5rem;
     display: grid;
   }
-
-
-
 
 
   
@@ -244,7 +245,7 @@ input[type-checkbox]:checked + .accordion-title {
   flex-direction: column;
 }
 
-.btn {
+.btn,.btn-disabled {
   display: flex;        /* Enables Flexbox */
   align-items: center;  /* Centers content vertically */
   justify-content: center; /* Centers content horizontally */
@@ -253,6 +254,11 @@ input[type-checkbox]:checked + .accordion-title {
   cursor: pointer;
   width: 14%;
   background-color: white;
+}
+.btn-disabled {
+  cursor: not-allowed;
+  opacity: 0.5; /* Reduce opacity to give a "faded" appearance */
+  pointer-events: none; /* Disables click events on the button */
 }
 .round{
   border-radius: .375rem;
@@ -385,7 +391,7 @@ input[type-checkbox]:checked + .accordion-title {
   width: 1em;
   height: 1em;
   cursor: pointer;
-  background-color: rgba(215, 14, 219, 0.4);
+  background-color: palevioletred;
   transition: background-color .1s, color .1s;
   display: inline-block;
   position: relative;
@@ -417,3 +423,55 @@ input[type-checkbox]:checked + .accordion-title {
   height: 25px;
   margin-right: 0.5px;
 }
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want a dotted underline */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden; /* Hides the tooltip text by default */
+  width: 120px; /* Width of the tooltip container */
+  background-color: rgb(31, 31, 31); /* Background color of the tooltip */
+  color: #fff; /* Text color */
+  text-align: center; /* Centers the text inside the tooltip */
+  padding: 5px 0; /* Padding inside the tooltip */
+
+  /* Positioning */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade-in effect */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show tooltip text when hovering */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1; /* Fades the tooltip in */
+
+}
+
+
+/* Style for the aside element */
+.sidebar {
+  float: right;          /* Aligns the aside to the right */
+  width: 200px;          /* Sets a fixed width */
+  margin: 10px;          /* Adds some margin around the aside */
+  padding: 10px;         /* Adds padding inside the aside */
+  border: 1px solid #161616; /* Adds a border for definition */
+}
+
+/* Style for the paragraph inside the aside */
+.sidebar p {
+  margin: 0;             /* Removes default margin */
+  line-height: 1.5;      /* Improves readability */
+}
+

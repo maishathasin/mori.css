@@ -28,11 +28,12 @@ ul {
         }
 </style>
 <body>
-    <div style="margin-left: 20%; margin-right: 20%;">
+        <div style="margin-left: 20%; margin-right: 20%; border: 1px solid black; padding: 1%;  outline: 1px solid black; outline-offset: 40px; ">
+   
     <header>
         <h1>Mori CSS Framework Documentation</h1>
         <p>Mori is a minimal CSS Framework used to create clean and retro style sites. I wanted to create a retro 
-            framework that can be used standalone but if needed combined with React/vue, also components that can be 
+            framework that can be used standalone but if needed combined with React/vue, also various classes that can be 
             reused for various components. 
         </p>
     </header>
@@ -255,6 +256,7 @@ ul {
 
     <section>
         <h2>Buttons</h2>
+        <hr>
         <p>Buttons are used for actions, like submitting forms or navigating pages. Mori provides various styles for buttons.</p>
         <!-- Button Example -->
         <div style="display: flex;">
@@ -269,7 +271,10 @@ ul {
             <button class="btn move" >Hover Button</button>
             <div style="padding-right: 1%;"></div>
 
-            <button class="btn color-change">color change</button>
+            <button class="btn-disabled" >Disabled Button</button>
+            <div style="padding-right: 1%;"></div>
+
+            <button class="btn color-change round">color change and round</button>
         </div>   
 
     </section>
@@ -284,7 +289,9 @@ ul {
             <br>
             &lt;button class="btn move" &gt;Hover Button&lt;/button&gt;<br>
             <br>
-            &lt;button class="btn color-change"&gt;color change&lt;/button&gt;        
+            &lt;button class="btn-disabled" &gt;Disabled Button&lt;/button&gt;<br>
+            <br>
+            &lt;button class="btn color-change round"&gt;color chang and round&lt;/button&gt;        
 
     </code>
  
@@ -334,7 +341,7 @@ ul {
             Search bar
         </h2>
         <hr>
-
+        <p>We can apply similar styles to Search bars also. </p>
         <div style="display: flex; ">
 
             <div class="card-wrap block-fixed search-bar"></div>
@@ -348,9 +355,26 @@ ul {
       
     </section>
 
+    <div style="padding-top: 2%; padding-bottom: 2%;"></div>
+    <button class="btn color-change round" style="padding: 1%; margin-bottom: 2%;" onclick="toggleCode('sbar')">Show Code</button>
+    <code id="sbar" class="card-wrap block-fixed code-snippet" style="padding: 1%;"> 
+        &lt;div style="display: flex; "&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card-wrap block-fixed search-bar"&gt;&lt;/div&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="card-wrap block-fixed" type="text" id="searchBar" placeholder="Search for blogs"&gt;<br>
+        &lt;/div&gt;<br>
+        <br>
+        &lt;div style="display: flex; padding-top: 2%;"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card-wrap block-fixed search-bar"&gt;&lt;/div&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="card-wrap color-change block-fixed" type="text" id="searchBar" placeholder="Search for blogs"&gt;<br>
+        &lt;/div&gt;
+
+    </code>
+
     <section>
-        <h2>Dropdown Menu</h2>
+        <h2>Drop Menus</h2>
         <hr>
+        <p>Dropdowns and Dropup menus are toggleable menus that allow the user to choose one value from a predefined list.</p>
+
         <!-- Dropdown Example -->
         <div class="dropdown move">
             <button class="dropbtn">Drop down</button>
@@ -369,15 +393,42 @@ ul {
                 <a href="#">Link 3</a>
             </div>
         </div>
-
         
     </section>
+
+    <div style="padding-top: 2%; padding-bottom: 2%;"></div>
+    <button class="btn color-change round" style="padding: 1%; margin-bottom: 2%;" onclick="toggleCode('dmenu')">Show Code</button>
+    <code id="dmenu" class="card-wrap block-fixed code-snippet" style="padding: 1%;"> 
+        &lt;div class="dropdown move"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="dropbtn"&gt;Drop down&lt;/button&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="dropdown-content"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Link 1&lt;/a&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Link 2&lt;/a&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Link 3&lt;/a&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+        <br>
+        &lt;div class="dropup block-fixed"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="dropbtn"&gt;Drop up&lt;/button&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="dropup-content"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Link 1&lt;/a&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Link 2&lt;/a&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Link 3&lt;/a&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+        &lt;/div&gt;
+    </code>
+
+
 
     <section>
         <h2>Accordion</h2>
         <hr>
+        <p>Accordions are a list of headers that can be clicked to hide or reveal additional content. They are usually 
+            used for FAQ/Questions etc. This was built completely in CSS so .
+        </p>
+        <br>
         <!-- Accordion Example -->
-        <div class="accordion">
+        <div class="accordion  ">
             <div class="accordion-item">
                 <input type="checkbox" id="faq-1" hidden />
                 <label for="faq-1" class="accordion-title">Accordion Item 1</label>
@@ -390,25 +441,65 @@ ul {
                     <p>Content for accordion item 2.</p>
                 </div>
             </div>
-            <!-- More accordion items here -->
+
         </div>
     </section>
+
+    <div style="padding-top: 2%; padding-bottom: 2%;"></div>
+    <button class="btn color-change round" style="padding: 1%; margin-bottom: 2%;" onclick="toggleCode('accod')">Show Code</button>
+    <code id="accod" class="card-wrap block-fixed code-snippet" style="padding: 1%;"> 
+
+        &lt;div class="accordion"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="accordion-item"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" id="faq-1" hidden /&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="faq-1" class="accordion-title"&gt;Accordion Item 1&lt;/label&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="accordion-content"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Content for accordion item 1.&lt;/p&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" id="faq-2" hidden /&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="faq-2" class="accordion-title"&gt;Accordion Item 2&lt;/label&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="accordion-content"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Content for accordion item 2.&lt;/p&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+        &lt;/div&gt;
+
+
+    </code>
 
 
     <section>
         <h2>Navigation Links</h2>
         <hr>
+        <p>Navigation links are used in navigation menus. Mori CSS provides various styles for animating these links.</p>
+
         <!-- Navigation Link Example -->
         <a href="#" class="anchor-animate">Link animate middle</a>
         <a href="#" class="anchor-animate-left">Link animate from left</a>
     </section>
 
+
+    <div style="padding-top: 2%; padding-bottom: 2%;"></div>
+    <button class="btn color-change round" style="padding: 1%; margin-bottom: 2%;" onclick="toggleCode('lin')">Show Code</button>
+    <code id="lin" class="card-wrap block-fixed code-snippet" style="padding: 1%;"> 
+            &lt;a href="#" class="anchor-animate"&gt;Link animate middle&lt;/a&gt;<br>
+            &lt;a href="#" class="anchor-animate-left"&gt;Link animate from left&lt;/a&gt;
+    </code>
+
     <section>
         <h2>Code Blocks</h2>
         <hr>
+        <p>Code blocks are used to display blocks of code with a distinct style to differentiate them from regular text.</p>
         <!-- Code Block Example -->
         <code class="card-wrap block-fixed">Sample Code Block</code>
     </section>
+
+    <div style="padding-top: 2%; padding-bottom: 2%;"></div>
+    <button class="btn color-change round" style="padding: 1%; margin-bottom: 2%;" onclick="toggleCode('cdblock')">Show Code</button>
+    <code id="cdblock" class="card-wrap block-fixed code-snippet" style="padding: 1%;"> 
+        &lt;code class="card-wrap block-fixed"&gt;Sample Code Block&lt;/code&gt;
+
+    </code>
 
 
     <section>
@@ -420,9 +511,59 @@ ul {
 
     </section>
 
+
+
+    <section>
+        <h2>Highlight</h2>
+        <hr>
+        <!-- Code Inline Example -->
+        <p>We can highlight certain words in our sentenences using the <highlight > &lt;highlight&gt;</highlight> tag</p>
+        <p>We can also add the reusable styles above like  <highlight class = "block-fixed "> class="block-fixed"</highlight> </p>
+
+    </section>
+
+
+    <section>
+        <h2>Tooltip</h2>
+        <hr>
+        <highlight class="tooltip">Tooltips
+            <span class="tooltiptext round">Tooltip text</span>
+        </highlight> are useful for providing extra information about a link, button, or any other element without cluttering the UI. Hover over the higlighted block 
+        to see the tooltip text 
+          
+    </section>
+
+    <div style="padding-top: 2%; padding-bottom: 2%;"></div>
+    <button class="btn color-change round" style="padding: 1%; margin-bottom: 2%;" onclick="toggleCode('tool')">Show Code</button>
+    <code id="tool" class="card-wrap block-fixed code-snippet" style="padding: 1%;"> 
+        &lt;highlight class="tooltip"&gt;
+        &lt;span class="tooltiptext round"&gt;Tooltip text&lt;/span&gt;
+        &lt;/highlight&gt;
+
+    </code>
+
+
+    <section>
+        <h2>Sidebar </h2>
+        <hr>
+        <p>A side bar can be used to emphasise information. We use <code class="inline"> class= "sidebar"</code> to show this</p> 
+        <div class="sidebar block-fixed">
+            <p>This is a side bar class that wraps around the paragraph</p>
+        </div>
+        <div style="font-size: 13px;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </section>
+
+
+    
+
     <section>
         <h2>Radio Buttons</h2>
         <hr>
+        <p>Radio buttons allow the user to select one option from a set. Mori CSS styles them for better visual appeal. We can 
+            use <code class="inline">class = "round" </code> to get rounded bullet points.
+        </p>
         <!-- Radio Button Example -->
         <div class="radio-group">
             <input type="radio" id="option1" name="radio-group" class="radio round" />
@@ -435,6 +576,25 @@ ul {
             <label for="option3">three</label>
           </div>
     </section>
+
+    <div style="padding-top: 2%; padding-bottom: 2%;"></div>
+    <button class="btn color-change round" style="padding: 1%; margin-bottom: 2%;" onclick="toggleCode('rad')">Show Code</button>
+    <code id="rad" class="card-wrap block-fixed code-snippet" style="padding: 1%;"> 
+
+        &lt;div class="radio-group"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="option1" name="radio-group" class="radio round" /&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="option1"&gt; one&lt;/label&gt;<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="option2" name="radio-group" class="radio" /&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="option2"&gt;two&lt;/label&gt;<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="option3" name="radio-group" class="radio" /&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="option3"&gt;three&lt;/label&gt;<br>
+        &lt;/div&gt;
+        
+
+    </code>
+
 
     <section>
         <h2> Typography</h2>
@@ -452,9 +612,39 @@ ul {
         <h2> Styles</h2>
         <hr>
         <p>
-            Because of the minimal 
+            Because of the minimal styles you can easily override to add your own themes and colors, here is an example:
         </p>
+        <div class="tag pressable" style="background-color: palevioletred; font-family: PICO-8;" >
+            <!-- Pico-8 font from https://fontstruct.com/fontstructions/show/2052852/pico-8-27-->
+            pink
+         </div> 
+         <div style="padding: 1%;"></div>
 
+         <button class="btn pressable" style="background-color:plum ;">plum button</button>
+
+    </section>
+
+    <div style="padding-top: 2%; padding-bottom: 2%;"></div>
+    <button class="btn color-change round" style="padding: 1%; margin-bottom: 2%;" onclick="toggleCode('styl')">Show Code</button>
+    <code id="styl" class="card-wrap block-fixed code-snippet" style="padding: 1%;"> 
+        &lt;div class="tag pressable" style="background-color: palevioletred; font-family: PICO-8;"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Pico-8 font from https://fontstruct.com/fontstructions/show/2052852/pico-8-27--&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;pink<br>
+        &lt;/div&gt;<br>
+        <br>
+        &lt;div style="padding: 1%;"&gt;&lt;/div&gt;<br>
+        <br>
+        &lt;button class="btn pressable" style="background-color:plum ;"&gt;plum button&lt;/button&gt;   
+
+    </code>
+
+
+    <section>
+        <h2> Demos</h2>
+        <hr>
+        <ul>
+            <li> A minimal starter page for a blog: <a href="blog.html" class="anchor-animate-left">Blog starter</a> </li>
+        </ul>
     </section>
 
 
