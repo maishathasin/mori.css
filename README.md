@@ -21,13 +21,13 @@ My personal philosophy for this project was to create an pretty pages with minim
 
 ## Screenshots 
 
-![docs](docs-pic.png)
+![docs](mori/docs-pic.png)
 </br>
-![docs](docs-pic2.png)
+![docs](mori/docs-pic2.png)
 </br>
-![Blog](blog1.png)
+![Blog](mori/blog1.png)
 </br>
-![Blog](blog2.png)
+![Blog](mori/blog2.png)
 
 
 
