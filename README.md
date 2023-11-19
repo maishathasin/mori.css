@@ -1,5 +1,10 @@
 # MORI.CSS
 
+![npm](https://img.shields.io/npm/dt/mori.css)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/maishathasin/mori.css/static.yml)
+
+
+
 
 
 Welcome to MORI.css. Mori CSS Framework is a lightweight, retro-themed CSS library designed for efficiency and simplicity. This framework is designed for web developers looking for something simple and retro. 
