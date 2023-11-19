@@ -1,7 +1,62 @@
 
+
+
+
+
+body {
+  font-family: 'Lato', sans-serif; /* Lato font */
+  background-color: #fefafa; /* Light grey background */
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5em; /* Size for h1 */
+}
+
+h2 {
+  font-size: 2em; /* Size for h2 */
+}
+
+h3 {
+  font-size: 1.75em; /* Size for h3 */
+}
+
+h4 {
+  font-size: 1.5em; /* Size for h4 */
+}
+
+h5 {
+  font-size: 1.25em; /* Size for h5 */
+}
+
+h6 {
+  font-size: 1em; /* Size for h6 */
+}
+
+/* CSS for Code Block */
+pre, code {
+  font-family: 'Consolas', 'Monaco', monospace; /* Monospace font for code */
+  background-color: #eee; /* Light background for code blocks */
+  border: 1px solid #999; /* Border for code blocks */
+  display: block;
+  padding: 20px;
+  overflow-x: auto; /* Horizontal scrolling for large code */
+}
+
+
+/*Adding some typography */
 .pressable {
   /* Initial box shadow for depth */
-  box-shadow: 3px 3px #181616;
+  box-shadow: 4px 4px #181616;
+  /* Transition for the shadow and transform properties for smooth animation */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+
+.block-fixed {
+  /* Initial box shadow for depth */
+  box-shadow: 4px 4px #181616;
   /* Transition for the shadow and transform properties for smooth animation */
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -12,7 +67,6 @@
   /* Slightly scale down the element to simulate pressing */
   transform: translateY(2px);
 }
-
 .tag {
     background-color: var(--white);
     color: var(--black);
@@ -39,6 +93,9 @@
   }
 
 
+
+
+
 .card-wrap {
     width: 100%;
     color: var(--black);
@@ -48,7 +105,6 @@
     transition: all .14s ;
     display: flex;
     overflow: hidden;
-    width: 50%;
 
     
 
@@ -60,7 +116,7 @@
 }
 
 .card-wrap-move:hover {
-  box-shadow: 6px 6px #181616;
+  box-shadow: 4px 4px #181616;
   transform: translate(-10px, -10px);
   transition: all .14s ;
 
@@ -95,7 +151,7 @@
     display: flex;
   }
   
-.card-content.blog {
+.blog {
     grid-column-gap: 0px;
     grid-row-gap: 2rem;
     grid-template-rows: auto;
@@ -106,20 +162,6 @@
     display: grid;
   }
 
-
-  .menu-button {
-    color: var(--white);
-    background-color: rgba(0, 0, 0, 0);
-    margin-left: auto;
-    padding: 1.5rem;
-    font-size: 2rem;
-  }
-
-  .menu-button.w--open {
-    border-left: 2px solid var(--black);
-    background-color: var(--black);
-    color: var(--white);
-  }
 
 
 
