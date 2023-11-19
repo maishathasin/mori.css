@@ -1,4 +1,9 @@
-# MORI.CSS
+# MORI.CSS 森
+
+![npm](https://img.shields.io/npm/dt/mori.css)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/maishathasin/mori.css/static.yml)
+
+
 
 
 
