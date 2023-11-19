@@ -28,6 +28,15 @@
         a {
             color: black;
         }
+        .smalltext{
+            font-size: small; 
+            padding: 3px 5px; 
+            margin-top: 4%;
+        }
+
+
+/* Optional: Add responsiveness or additional styling as needed */
+
 
         /* Nav bar styles */
         .nav-bar {
@@ -75,30 +84,45 @@
     <!-- Navigation Bar -->
     <div class="nav-bar">
         <div style=" border-right: 1px solid black ;">
-        <a href="#" class="anchor-animate" style="font-size: 60px"> BLOG</a>
+        <a href="https://github.com/maishathasin/mori.css" style="font-size: 60px"> MORI.CSS</a>
+
+
     </div>
         <div style=" border-left: 1px solid black ; padding: 1%;">
             <div style="margin-top: 18px;">
-        <a href="#" class="anchor-animate">Home</a>
-        <a href="#" class="anchor-animate">Features</a>
-        <a href="#" class="anchor-animate">Pricing</a>
-        <a href="#" class="anchor-animate">Blog</a>
-        <a href="#" class="anchor-animate">Discover</a>
+                <div class="dropdown">
+                    <a href="#" class="anchor-animate">Home</a>
+                        <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+        <a href="https://github.com/maishathasin" class="anchor-animate">Github</a>
+        <a href="#" class="anchor-animate">LinkedIn</a>
+        <a href="https://twitter.com/maiphobe" class="anchor-animate">Twitter</a>
+        <a href="#" class="anchor-animate">Other</a>
     </div>
     </div>
-        <!-- ... other nav items ... -->
+
     </div>
     
     <div style="margin-left: 15%; margin-right: 15%; border: 1px solid black; border-top: none; padding: 1%;">
 
-    <div style="margin: 5%;">
+
+<div style="border-bottom: 1px solid black; margin-left: -1.5%; margin-right: -1.5%;">
+    <div style="margin: 10%;">
     <!-- Blog Header -->
     <div class="blog-header">
-        <h1>The latest news and resources</h1>
+        <h1 style="font-size: 5rem;">The latest news and resources</h1>
         <p>There’s no roadmap for making your own road. But here’s some how-tos, helpful tips, templates, and tools to help you.</p>
     </div>
 
 </div>
+
+</div>
+
+
 
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
@@ -108,17 +132,17 @@
 
     <!-- BLOGS-->
 
-    <div style="font-size: 60px;margin:5%" > <b>BLOGS</b></div>
+    <div style="font-size: 60px;margin-top:5% " > <b>BLOGS</b></div>
     <div  id="cardsContainer" style="display: flex;">
         
         <!-- Blog Card 1 -->
         <div class="card-wrap block-fixed" style="width: 50%; background-color: white;">
             <img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail">
             <div class="card-content blog">
-                <div  style="font-size: small; padding: 3px 5px; margin-top: 4%;">
+                <div  class="smalltext">
                     November 19th, 2023
                 </div>
-                <h4>NUMBER</h4>
+                <h3>Star Mori.css on Github</h3>
                 <p>Card description and details.</p>
                 <div>
                 <a href="#" >Read More</a>
@@ -141,11 +165,15 @@
         <div class="card-wrap block-fixed" style="width: 50%; background-color: white;">
             <img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail">
             <div class="card-content blog">
-                <h4>Title</h4>
-                <p>Card description and details.</p>
+                <div  class="smalltext">
+                    November 19th, 2023
+                </div>
+                <h3>Why you should use MORI.css</h3>
+                <p>Blog decription, or preview of blog </p>
             <div>
                 <a href="#">Read More</a>
             </div>
+            
 
             <div  style="display: flex;">
                 <div class="tag color-change" style= "margin-right: 10px;" >
@@ -161,6 +189,26 @@
         <!-- More blog cards can be added here -->
     </div>
 
+<div style="padding-top: 10%;">
+    <h1 style="position: relative;"> FAQ</h1>
+    <div class="accordion">
+        <div class="accordion-item">
+            <input type="checkbox" id="faq-1" hidden />
+            <label for="faq-1" class="accordion-title">Question 1</label>
+            <div class="accordion-content">
+                <p>Answer for question 1 </p>
+            </div>
+            <input type="checkbox" id="faq-2" hidden />
+            <label for="faq-2" class="accordion-title">Question 2</label>
+            <div class="accordion-content">
+                <p>Star mori on github</p>
+            </div>
+        </div>
+        <!-- More accordion items here -->
+    </div>
+
+</div>
+
     <script>
         function searchCards() {
             var input, filter, cardsContainer, cards, title, tags, i, titleText, tagText, shouldDisplay;
@@ -170,7 +218,7 @@
             cards = cardsContainer.getElementsByClassName('card-wrap');
             
             for (i = 0; i < cards.length; i++) {
-                title = cards[i].getElementsByTagName('h4')[0];
+                title = cards[i].getElementsByTagName('h3')[0];
                 tags = cards[i].getElementsByClassName('tag');
                 
                 shouldDisplay = false;

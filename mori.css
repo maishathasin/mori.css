@@ -36,10 +36,13 @@ pre, code {
   border: 1px solid #999; /* Border for code blocks */
   display: block;
   padding: 2px;
-  overflow-x: auto; /* Horizontal scrolling for large code */
+  overflow: auto; /* Horizontal scrolling for large code */
   font-size: 90%; /* Slightly smaller font size than the surrounding text */
   white-space: nowrap; /* Prevents the code from breaking into multiple lines */
+  max-width: 100%; /* Ensures the code block does not exceed the parent element's width */
+  box-sizing: border-box; /* Includes padding and border in the width */
 }
+
 
 .inline {
   display: inline-block;
@@ -181,13 +184,15 @@ pre, code {
 
 /* CSS */
 .accordion {
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .accordion-title {
   display: block;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
   margin: 0;
   font-size: 30px;
   width: 100%;

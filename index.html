@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<div style="margin-left: 20%; margin-right: 20%;">
 
 <head>
     <meta charset="UTF-8">
@@ -12,30 +11,71 @@
 <style>
     
 
-    .code-snippet {
+ .code-snippet {
         display: none;
     }
-    pre {
-  overflow: auto;
-  font-size: 13px;
-}
+
+ul {
+            list-style: none; /* Removes default bullets */
+        }
+        ul li::before {
+            content: '•'; /* Unicode character for bullet */
+            font-size: 35px; /* Size of the bullet */
+            vertical-align: middle;
+            display: inline-block;
+            width: 1em; /* Space before bullet */
+            margin-left: -1em; /* Align with list */
+        }
 </style>
 <body>
-
+    <div style="margin-left: 20%; margin-right: 20%;">
     <header>
         <h1>Mori CSS Framework Documentation</h1>
-        <p>Explore the capabilities and components of the Mori CSS Framework.</p>
+        <p>Mori is a minimal CSS Framework used to create clean and retro style sites. I wanted to create a retro 
+            framework that can be used standalone but if needed combined with React/vue, also components that can be 
+            reused for various components. 
+        </p>
     </header>
 
-    <h3>Installation</h3> 
-    <hr>
-    <p>Paste this into the <code class="inline">&lt;head&gt;</code> of your HTML:</p>
-    <code class="block-fixed">add this </code>
+    <section>
+        <h3>Goals</h3>
+        <hr>
+        <ul >
+            <li>Minimal</li>
+            <li>Retro style</li>
+            <li>Small size &lt; 10kb  </li>
+            <li>Reusable classes</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h3>Getting Started</h3>
+        <hr>
+        <h4>Installation</h4>
+        <p>To use Mori CSS in your project, include the following link in the <code class="inline">&lt;head&gt;</code> section of your HTML</p>
+        <code  class="block-fixed">&lt;link href="path/to/mori.css" rel="stylesheet" /&gt;</code>
+        <p>This will import the Mori CSS stylesheet into your project, giving you access to all the styles and components.</p>
+    </section>
+
+    <p> Several classes can be reused for any components </p>
+
+    <ul >
+        <li>  <code class="inline block-fixed">class = "block-fixed"</code>:gives a fixed shadow dimension to components  </li>
+        <li>  <code class="inline move">class = "move"</code>:gives a shadow dimension after hovering </li>
+        <li>  <code class="inline pressable">class = "pressable"</code> :makes the component look pressable </li>
+        <li>  <code class="inline round">class = "round"</code> :Any component can be rounded </li>
+        <li>  <code class="inline color-change">class = "color-change"</code> :components can change to black when hovered </li>
+
+
+    </ul>
 
     <!-- Component Section -->
     <section>
         <h2>Cards</h2>
+        <hr>
         <!-- Card Example -->
+        <p>Cards are flexible content containers. They can include options for headers, footers, content, and powerful display options.</p>
         <div style="display:flex;">
 
         <div class="card-wrap" style="width: 20%;">
@@ -51,23 +91,10 @@
         <!--<svg onclick="toggleCode('cardCode')" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor"> </svg>-->
             <!-- SVG content here -->
             
-        
-        <!-- Code Snippet -->
-        <pre id="cardCode1" class="code-snippet">
-            div class="card-wrap noise3 move"
-               img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail"
-               div class="card-content blog"
-                    &lt;p&gt;Card description and details.&lt;/p&gt;
-                    &lt;a href="#"&gt;Read More&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-       
-        </pre>
 
         <div style="padding-right: 1%;"></div>
 
-
-        <div class="card-wrap block-fixed" style="width: 20%;">
+        <div class="card-wrap block-fixed " style="width: 20%;">
             <img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail">
             <div class="card-content blog">
                 <h4>Title</h4>
@@ -80,17 +107,6 @@
         </svg>-->
             <!-- SVG content here -->
 
-        <!-- Code Snippet -->
-        <pre id="cardCode" class="code-snippet">
-            div class="card-wrap noise3 move"
-               img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail"
-               div class="card-content blog"
-                    &lt;p&gt;Card description and details.&lt;/p&gt;
-                    &lt;a href="#"&gt;Read More&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-       
-        </pre>
 
         <div style="padding-right: 1%;"></div>
 
@@ -109,16 +125,6 @@
             <!-- SVG content here -->
           
         <!-- Code Snippet -->
-        <pre id="cardCode" class="code-snippet">
-            div class="card-wrap noise3 move"
-               img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail"
-               div class="card-content blog"
-                    &lt;p&gt;Card description and details.&lt;/p&gt;
-                    &lt;a href="#"&gt;Read More&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-       
-        </pre>
 
         <div style="padding-right: 1%;"></div>
 
@@ -136,16 +142,9 @@
             <!-- SVG content here -->
 
         <!-- Code Snippet -->
-        <pre id="cardCode" class="code-snippet">
-            div class="card-wrap noise3 move"
-               img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail"
-               div class="card-content blog"
-                    &lt;p&gt;Card description and details.&lt;/p&gt;
-                    &lt;a href="#"&gt;Read More&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-       
-        </pre>
+        
+        <!-- Code Snippet for Card 1 -->
+
 
 
         <div style="padding-right: 1%;"></div>
@@ -164,17 +163,7 @@
         </svg>-->
             <!-- SVG content here -->
 
-        <!-- Code Snippet -->
-        <pre id="cardCode" class="code-snippet">
-            div class="card-wrap noise3 move"
-               img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail"
-               div class="card-content blog"
-                    &lt;p&gt;Card description and details.&lt;/p&gt;
-                    &lt;a href="#"&gt;Read More&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-       
-        </pre>
+
 
 
         <div style="padding-right: 1%;"></div>
@@ -184,37 +173,89 @@
             <div class="blog">             
              <h4>Title</h4>
                 <p>Card description and details.</p></div>
-
-
         </div>
         <!-- SVG Icon for displaying code -->
         <!--<svg onclick="toggleCode('cardCode')" width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor">             stuff 
         </svg>-->
             <!-- SVG content here -->
 
-        <!-- Code Snippet -->
-        <pre id="cardCode" class="code-snippet">
-            div class="card-wrap noise3 move"
-               img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail"
-               div class="card-content blog"
-                    &lt;p&gt;Card description and details.&lt;/p&gt;
-                    &lt;a href="#"&gt;Read More&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-       
-        </pre>
+
 
     </div>
-
-
-    
-
-
     </section>
+    <div style="padding-top: 2%; padding-bottom: 2%;"></div>
+
+    <button class="btn color-change round" style="padding: 1%; margin-bottom: 2%;" onclick="toggleCode('cardCode1')">Show Code</button>
+    
+        <code id="cardCode1" class="card-wrap block-fixed code-snippet" style="padding: 1%;"> 
+                &lt;div class="card-wrap" style="width: 20%;"&gt;<br>
+                &nbsp;&nbsp;&lt;img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail"&gt;<br>
+                &nbsp;&nbsp;&lt;div class="card-content blog"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Title&lt;/h4&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Card description and details.&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Read More&lt;/a&gt;<br>
+                &nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+                <br>
+
+                &lt;div class="card-wrap block-fixed " style="width: 20%;"&gt;<br>
+                &nbsp;&nbsp;&lt;img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail"&gt;<br>
+                &nbsp;&nbsp;&lt;div class="card-content blog"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Title&lt;/h4&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Card description and details.&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Read More&lt;/a&gt;<br>
+                &nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+
+                <br>
+                &lt;div class="card-wrap  move" style="width: 20%;"&gt;<br>
+                &nbsp;&nbsp;&lt;img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail"&gt;<br>
+                &nbsp;&nbsp;&lt;div class="card-content blog"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Title&lt;/h4&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Card description and details.&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Read More&lt;/a&gt;<br>
+                &nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+
+                <br>
+                &lt;div class="card-wrap  pressable" style="width: 20%;"&gt;<br>
+                &nbsp;&nbsp;&lt;img src="Vintage-cats-2.jpeg" a&lt="cats" class="card-thumbnail"&gt;<br>
+                &nbsp;&nbsp;&lt;div class="card-content blog"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Title&lt;/h4&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Card description and details.&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Read More&lt;/a&gt;<br>
+                &nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+
+                <br>
+  
+                <br>
+                &lt;div class="card-wrap  pressable round" style="width: 20%;"&gt;<br>
+                &nbsp;&nbsp;&lt;img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail"&gt;<br>
+                &nbsp;&nbsp;&lt;div class="card-content blog"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Title&lt;/h4&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Card description and details.&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Read More&lt;/a&gt;<br>
+                &nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+
+                <br>
+                <br>
+                &lt;div class="card-wrap block-fixed round" style="width: 20%;"&gt;<br>
+                &nbsp;&nbsp;&lt;div class="blog"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Title&lt;/h4&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Card description and details.&lt;/p&gt;&lt;/div&gt;<br>
+                &lt;/div&gt;<br>
+
+           
+        </code>        
+                
+   
 
 
     <section>
         <h2>Buttons</h2>
+        <p>Buttons are used for actions, like submitting forms or navigating pages. Mori provides various styles for buttons.</p>
         <!-- Button Example -->
         <div style="display: flex;">
         
@@ -225,17 +266,32 @@
             <button class="btn block-fixed">Fixed block button</button>
             <div style="padding-right: 1%;"></div>
 
-            <button class="btn move" style="background-color: brown;">Pressable Button</button>
+            <button class="btn move" >Hover Button</button>
             <div style="padding-right: 1%;"></div>
 
-            <button class="btn color-change">Pressable Button</button>
+            <button class="btn color-change">color change</button>
         </div>   
 
     </section>
 
+    <div style="padding-top: 2%; padding-bottom: 2%;"></div>
 
+    <button class="btn color-change round" style="padding: 1%; margin-bottom: 2%;" onclick="toggleCode('Buttons')">Show Code</button>
+    <code id="Buttons" class="card-wrap block-fixed code-snippet" style="padding: 1%;"> 
+            &lt;button class="btn pressable"&gt;Pressable Button&lt;/button&gt;<br>
+            <br>
+            &lt;button class="btn block-fixed"&gt;Fixed block button&lt;/button&gt;<br>
+            <br>
+            &lt;button class="btn move" &gt;Hover Button&lt;/button&gt;<br>
+            <br>
+            &lt;button class="btn color-change"&gt;color change&lt;/button&gt;        
+
+    </code>
+ 
+    
     <section>
         <h2>Tags</h2>
+        <hr>
         <div class="tag pressable" >
            Star on github
         </div>  
@@ -251,8 +307,50 @@
 
     </section>
 
+
+    <div style="padding-top: 2%; padding-bottom: 2%;"></div>
+
+    <button class="btn color-change round" style="padding: 1%; margin-bottom: 2%;" onclick="toggleCode('tags')">Show Code</button>
+    <code id="tags" class="card-wrap block-fixed code-snippet" style="padding: 1%;"> 
+            &lt;div class="tag pressable" &gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Star on github<br>
+            &lt;/div&gt;<br>
+            <br>
+            &lt;div class="tag block-fixed" &gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Follow maishthasin<br>
+            &lt;/div&gt;<br>
+            <br>
+            &lt;div class="tag move" &gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Star on github<br>
+            &lt;/div&gt;<br>
+            <br>
+            &lt;div class="tag color-change" &gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Star on github<br>
+            &lt;/div&gt;
+    </code>
+
+    <section>
+        <h2>
+            Search bar
+        </h2>
+        <hr>
+
+        <div style="display: flex; ">
+
+            <div class="card-wrap block-fixed search-bar"></div>
+            <input class="card-wrap block-fixed" type="text"  id="searchBar" placeholder="Search for blogs">
+        </div>
+        <div style="display: flex; padding-top: 2%;">
+            <div class="card-wrap block-fixed search-bar"></div>
+            <input class="card-wrap color-change block-fixed" type="text"  id="searchBar" placeholder="Search for blogs">
+        </div>
+
+      
+    </section>
+
     <section>
         <h2>Dropdown Menu</h2>
+        <hr>
         <!-- Dropdown Example -->
         <div class="dropdown move">
             <button class="dropbtn">Drop down</button>
@@ -277,6 +375,7 @@
 
     <section>
         <h2>Accordion</h2>
+        <hr>
         <!-- Accordion Example -->
         <div class="accordion">
             <div class="accordion-item">
@@ -298,6 +397,7 @@
 
     <section>
         <h2>Navigation Links</h2>
+        <hr>
         <!-- Navigation Link Example -->
         <a href="#" class="anchor-animate">Link animate middle</a>
         <a href="#" class="anchor-animate-left">Link animate from left</a>
@@ -305,23 +405,56 @@
 
     <section>
         <h2>Code Blocks</h2>
+        <hr>
         <!-- Code Block Example -->
         <code class="card-wrap block-fixed">Sample Code Block</code>
     </section>
 
+
+    <section>
+        <h2>Inline</h2>
+        <hr>
+        <!-- Code Inline Example -->
+        <p>We can add code to inline too, using the <code class = "inline"> class="inline"</code> class</p>
+        <p>We can also add the reusable styles above like  <code class = "inline pressable"> class="inline pressable"</code> </p>
+
+    </section>
+
     <section>
         <h2>Radio Buttons</h2>
+        <hr>
         <!-- Radio Button Example -->
         <div class="radio-group">
-            <input type="radio" id="option1" name="radio-group" class="w-slider-dot" />
+            <input type="radio" id="option1" name="radio-group" class="radio round" />
             <label for="option1"> one</label>
           
-            <input type="radio" id="option2" name="radio-group" class="w-slider-dot" />
+            <input type="radio" id="option2" name="radio-group" class="radio " />
             <label for="option2">two</label>
           
-            <input type="radio" id="option3" name="radio-group" class="w-slider-dot" />
+            <input type="radio" id="option3" name="radio-group" class="radio" />
             <label for="option3">three</label>
           </div>
+    </section>
+
+    <section>
+        <h2> Typography</h2>
+        <hr>
+        <h1> This is Heading 1</h1>
+        <h2> This is Heading 2</h2>
+        <h3> This is Heading 3</h3>
+        <h4> This is Heading 4</h4>
+        <h5> This is Heading 5</h5>
+        <h6> This is Heading 6 </h6>
+    </section>
+
+
+    <section>
+        <h2> Styles</h2>
+        <hr>
+        <p>
+            Because of the minimal 
+        </p>
+
     </section>
 
 
