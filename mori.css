@@ -43,9 +43,13 @@ pre, code {
 
 .inline {
   display: inline-block;
-  font-size: 0.75em;
-  padding: 0 6px;
-  margin: 1px 1px -3px 1px;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: #e6edf3;
+  vertical-align: middle;
+  background-color: #515b67;
+  border: solid 1px rgba(110,118,129,0.4);
 }
 
 
@@ -94,13 +98,10 @@ pre, code {
 
 
 
-
-
 .card-wrap {
     width: 100%;
     color: var(--black);
     border: 2px solid #000;
-
     flex-direction: column;
     transition: all .14s ;
     display: flex;
@@ -118,6 +119,7 @@ pre, code {
   transition: all .14s ;
 
 }
+
 
 
 
@@ -238,12 +240,14 @@ input[type-checkbox]:checked + .accordion-title {
 }
 
 .btn {
-  padding: 16px;
+  display: flex;        /* Enables Flexbox */
+  align-items: center;  /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  padding: 13px;
   font-size: 16px;
   cursor: pointer;
-  width: 15%;
+  width: 14%;
   background-color: white;
-  flex-direction: column;
 }
 .round{
   border-radius: .375rem;
@@ -372,7 +376,7 @@ input[type-checkbox]:checked + .accordion-title {
   align-items: center;
 }
 
-.w-slider-dot {
+.radio {
   width: 1em;
   height: 1em;
   cursor: pointer;
@@ -385,22 +389,26 @@ input[type-checkbox]:checked + .accordion-title {
   outline: none; /* Remove default focus outline */
 }
 
-.w-slider-dot:checked {
-  background-color: black;
-}
-
-.w-slider-dot:focus {
-  box-shadow: 0 0 0 2px #ede7e7;
-  background-color: black;
-}
-
-.w-slider-dot:focus:checked {
-  box-shadow: none;
+.radio:checked {
   background-color: black;
 }
 
 
 
-/* css for code block also use highlight js*/ 
+
+#searchBar {
+  width: 70%; /* Adjust the width as needed */
+  padding: 5px 10px; /* Adjust the padding to make the search bar thinner or thicker */
+  outline: none;
+  /* Other styles for the search bar */
+}
 
 
+.search-bar {
+  background-image: url('data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9ImJsYWNrIiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNXB4Ij4KICAgIDxwYXRoIGQ9Ik0xMCwyQTgsOCwwLDEsMCwxOCwxMCw4LDgsMCwwLDAsMTAsMlptMCwxNGE2LDYsMCwxLDEsNi02QTYsNiwwLDAsMSwxMCwxNloiLz4KICAgIDxwYXRoIGQ9Ik0yMSwyMGwtNC4zNS00LjM1YTEsMSwwLDAsMC0xLjQsMS40TDE5LjYsMjEuNGExLDEsMCwwLDAsMS40LTEuNFoiLz4KPC9zdmc+Cg==');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 25px;
+  margin-right: 0.5px;
+}

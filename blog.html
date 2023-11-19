@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <link href="mori.css" rel="stylesheet" />
+
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p, a {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        #searchBar {
+        width: 70%; /* Adjust the width as needed */
+        padding: 5px 10px; /* Adjust the padding to make the search bar thinner or thicker */
+        outline: none;
+        /* Other styles for the search bar */
+    }
+
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        a {
+            color: black;
+        }
+
+        /* Nav bar styles */
+        .nav-bar {
+            border-color: black;
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            size: 6%;
+            /*padding: 20px 20px; */
+        }
+
+        .nav-bar a {
+            
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+            margin-right: 20px;
+        }
+        /* Additional styles for elements seen in the screenshot */
+        .blog-header {
+            text-align: center;
+            color: #000000;
+            font-weight: 700;
+            padding: 50px 10px;
+        }
+
+        .blog-header h1 {
+            margin-bottom: 10px;
+            font-size: 48px;
+        }
+
+        .blog-header p {
+            font-size: 20px;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+    
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <div style=" border-right: 1px solid black ;">
+        <a href="#" class="anchor-animate" style="font-size: 60px"> BLOG</a>
+    </div>
+        <div style=" border-left: 1px solid black ; padding: 1%;">
+            <div style="margin-top: 18px;">
+        <a href="#" class="anchor-animate">Home</a>
+        <a href="#" class="anchor-animate">Features</a>
+        <a href="#" class="anchor-animate">Pricing</a>
+        <a href="#" class="anchor-animate">Blog</a>
+        <a href="#" class="anchor-animate">Discover</a>
+    </div>
+    </div>
+        <!-- ... other nav items ... -->
+    </div>
+    
+    <div style="margin-left: 15%; margin-right: 15%; border: 1px solid black; border-top: none; padding: 1%;">
+
+    <div style="margin: 5%;">
+    <!-- Blog Header -->
+    <div class="blog-header">
+        <h1>The latest news and resources</h1>
+        <p>There’s no roadmap for making your own road. But here’s some how-tos, helpful tips, templates, and tools to help you.</p>
+    </div>
+
+</div>
+
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+    <div class=" card-wrap block-fixed search-bar"></div>
+    <input class="card-wrap block-fixed" type="text" id="searchBar" onkeyup="searchCards()" placeholder="Search for blogs">
+</div>
+
+    <!-- BLOGS-->
+
+    <div style="font-size: 60px;margin:5%" > <b>BLOGS</b></div>
+    <div  id="cardsContainer" style="display: flex;">
+        
+        <!-- Blog Card 1 -->
+        <div class="card-wrap block-fixed" style="width: 50%; background-color: white;">
+            <img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail">
+            <div class="card-content blog">
+                <div  style="font-size: small; padding: 3px 5px; margin-top: 4%;">
+                    November 19th, 2023
+                </div>
+                <h4>NUMBER</h4>
+                <p>Card description and details.</p>
+                <div>
+                <a href="#" >Read More</a>
+            </div>
+            <div  style="display: flex;">
+                <div class="tag color-change" style=" margin-right: 10px; " >
+                    Personal
+                 </div>
+                 <div class="tag color-change" style=" margin-right: 10px;" >
+                    Philosophy
+                 </div>    
+            </div>
+            </div>
+        </div>
+
+        <div style="padding-right: 2%;"></div>
+
+
+        <!-- Blog Card 2 -->
+        <div class="card-wrap block-fixed" style="width: 50%; background-color: white;">
+            <img src="Vintage-cats-2.jpeg" alt="cats" class="card-thumbnail">
+            <div class="card-content blog">
+                <h4>Title</h4>
+                <p>Card description and details.</p>
+            <div>
+                <a href="#">Read More</a>
+            </div>
+
+            <div  style="display: flex;">
+                <div class="tag color-change" style= "margin-right: 10px;" >
+                    Tech
+                 </div>
+                 <div class="tag color-change" style=" margin-right: 10px;" >
+                    CSS
+                 </div>    
+            </div>
+            </div>
+        </div>
+
+        <!-- More blog cards can be added here -->
+    </div>
+
+    <script>
+        function searchCards() {
+            var input, filter, cardsContainer, cards, title, tags, i, titleText, tagText, shouldDisplay;
+            input = document.getElementById('searchBar');
+            filter = input.value.toUpperCase();
+            cardsContainer = document.getElementById('cardsContainer');
+            cards = cardsContainer.getElementsByClassName('card-wrap');
+            
+            for (i = 0; i < cards.length; i++) {
+                title = cards[i].getElementsByTagName('h4')[0];
+                tags = cards[i].getElementsByClassName('tag');
+                
+                shouldDisplay = false;
+        
+                if (title) {
+                    titleText = title.textContent || title.innerText;
+                    if (titleText.toUpperCase().indexOf(filter) > -1) {
+                        shouldDisplay = true;
+                    }
+                }
+        
+                for (var j = 0; j < tags.length; j++) {
+                    tagText = tags[j].textContent || tags[j].innerText;
+                    if (tagText.toUpperCase().indexOf(filter) > -1) {
+                        shouldDisplay = true;
+                    }
+                }
+                
+                cards[i].style.display = shouldDisplay ? "" : "none";
+            }
+        }
+        </script>
+        
+        
+</body>
+</div>
+</html>
