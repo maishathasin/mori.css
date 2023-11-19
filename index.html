@@ -27,6 +27,11 @@
         <p>Explore the capabilities and components of the Mori CSS Framework.</p>
     </header>
 
+    <h3>Installation</h3> 
+    <hr>
+    <p>Paste this into the <code class="inline">&lt;head&gt;</code> of your HTML:</p>
+    <code class="block-fixed">add this </code>
+
     <!-- Component Section -->
     <section>
         <h2>Cards</h2>
@@ -220,11 +225,29 @@
             <button class="btn block-fixed">Fixed block button</button>
             <div style="padding-right: 1%;"></div>
 
-            <button class="btn move noise3" style="background-color: brown;">Pressable Button</button>
+            <button class="btn move" style="background-color: brown;">Pressable Button</button>
             <div style="padding-right: 1%;"></div>
 
-            <button class="btn ">Pressable Button</button>
+            <button class="btn color-change">Pressable Button</button>
         </div>   
+
+    </section>
+
+
+    <section>
+        <h2>Tags</h2>
+        <div class="tag pressable" >
+           Star on github
+        </div>  
+        <div class="tag block-fixed" >
+            Follow maishthasin
+         </div>  
+         <div class="tag move" >
+            Star on github
+         </div>  
+         <div class="tag color-change" >
+            Star on github
+         </div>  
 
     </section>
 
@@ -248,6 +271,8 @@
                 <a href="#">Link 3</a>
             </div>
         </div>
+
+        
     </section>
 
     <section>
@@ -260,30 +285,28 @@
                 <div class="accordion-content">
                     <p>Content for accordion item 1.</p>
                 </div>
+                <input type="checkbox" id="faq-2" hidden />
+                <label for="faq-2" class="accordion-title">Accordion Item 2</label>
+                <div class="accordion-content">
+                    <p>Content for accordion item 2.</p>
+                </div>
             </div>
             <!-- More accordion items here -->
         </div>
     </section>
 
-    <section>
-        <h2>Forms</h2>
-        <!-- Form Example -->
-        <form class="inline-newsletter-grid">
-            <input type="email" placeholder="Your email address">
-            <button type="submit" class="form-submit-btn">Subscribe</button>
-        </form>
-    </section>
 
     <section>
         <h2>Navigation Links</h2>
         <!-- Navigation Link Example -->
-        <a href="#" class="anchor-animate">Anchor Link</a>
+        <a href="#" class="anchor-animate">Link animate middle</a>
+        <a href="#" class="anchor-animate-left">Link animate from left</a>
     </section>
 
     <section>
         <h2>Code Blocks</h2>
         <!-- Code Block Example -->
-        <code class="card-wrap move">Sample Code Block</code>
+        <code class="card-wrap block-fixed">Sample Code Block</code>
     </section>
 
     <section>
@@ -291,9 +314,14 @@
         <!-- Radio Button Example -->
         <div class="radio-group">
             <input type="radio" id="option1" name="radio-group" class="w-slider-dot" />
-            <label for="option1">Option 1</label>
-            <!-- More radio buttons here -->
-        </div>
+            <label for="option1"> one</label>
+          
+            <input type="radio" id="option2" name="radio-group" class="w-slider-dot" />
+            <label for="option2">two</label>
+          
+            <input type="radio" id="option3" name="radio-group" class="w-slider-dot" />
+            <label for="option3">three</label>
+          </div>
     </section>
 
 

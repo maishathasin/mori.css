@@ -1,13 +1,9 @@
 
-
-
-
-
 body {
   font-family: 'Lato', sans-serif; /* Lato font */
   background-color: #fefafa; /* Light grey background */
+  
 }
-
 /* Headings */
 h1 {
   font-size: 2.5em; /* Size for h1 */
@@ -39,8 +35,17 @@ pre, code {
   background-color: #eee; /* Light background for code blocks */
   border: 1px solid #999; /* Border for code blocks */
   display: block;
-  padding: 20px;
+  padding: 2px;
   overflow-x: auto; /* Horizontal scrolling for large code */
+  font-size: 90%; /* Slightly smaller font size than the surrounding text */
+  white-space: nowrap; /* Prevents the code from breaking into multiple lines */
+}
+
+.inline {
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 0 6px;
+  margin: 1px 1px -3px 1px;
 }
 
 
@@ -75,21 +80,16 @@ pre, code {
     padding: .5rem .75rem;
     font-size: .875rem;
     line-height: 1;
-    transition: all .14s cubic-bezier(.25, .46, .45, .94);
     display: inline-block;
   }
   
-.tag-move:hover {
-    transform: translate(-.25rem, -.25rem);
-    box-shadow: 3px 3px #181616;
-    background-image: url("data:image/svg+xml,%3C!-- svg: first layer --%3E%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-
-  }
   
   /* Tag with Color Change on Hover */
-.tag-color-change:hover {
-    background-color: #980808; /* Change to your desired hover background color */
-    color: var(--white); /* Change text color if needed */
+.color-change:hover {
+    background-color: #110202; /* Change to your desired hover background color */
+    color: white ;/* Change text color if needed */
+    transition: all .14s cubic-bezier(.25, .46, .45, .94);
+
   }
 
 
@@ -334,13 +334,13 @@ input[type-checkbox]:checked + .accordion-title {
 /* window pane and just general dialogue boxes*/
 
 
-.anchor-animate {
+.anchor-animate,.anchor-animate-left {
   text-decoration: none; /* Removes default underline */
   position: relative; /* Needed for positioning the pseudo-element */
   display: inline-block; /* Ensures the underline fits the text */
 }
 
-.anchor-animate::after {
+.anchor-animate::after,.anchor-animate-left::after {
   content: '';
   position: absolute;
   width: 0; /* Start with no width */
@@ -349,9 +349,18 @@ input[type-checkbox]:checked + .accordion-title {
   left: 50%; /* Start from the middle */
   background-color: black; /* Color of the underline */
   transition: width 0.5s ease, left 0.5s ease; /* Smooth transition for width and position */
+  
+}
+
+.anchor-animate-left::after{
+  left: 0%
 }
 
 .anchor-animate:hover::after {
+  width: 100%; /* Full width on hover */
+  left: 0; /* Start from the left edge */
+}
+.anchor-animate-left:hover::after {
   width: 100%; /* Full width on hover */
   left: 0; /* Start from the left edge */
 }
