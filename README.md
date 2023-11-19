@@ -37,6 +37,15 @@ My personal philosophy for this project was to create an pretty pages with minim
 
 ## Installation 
 
+To use mori in your project add the following in your header 
+
+```    <link href="https://cdn.jsdelivr.net/gh/maishathasin/mori.css/mori.css" rel="stylesheet" />
+```
+or the mini version 
+```
+    <link href="https://cdn.jsdelivr.net/gh/maishathasin/mori.css/mori.min.css" rel="stylesheet" />
+```
+
 
 
 
