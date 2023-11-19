@@ -45,7 +45,11 @@ or the mini version
 ```
     <link href="https://cdn.jsdelivr.net/gh/maishathasin/mori.css/mori.min.css" rel="stylesheet" />
 ```
-
+ 
+ Or install from npm and use from there 
+ ```
+ npm i mori.css
+ ```
 
 
 
