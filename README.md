@@ -19,6 +19,15 @@ or the mini version
  ```
  npm i mori.css
  ```
+## Screenshots 
+
+![docs](docs-pic.png)
+</br>
+![docs](docs-pic2.png)
+</br>
+![Blog](blog1.png)
+</br>
+![Blog](blog2.png)
 
 ### Documentation
 
@@ -36,19 +45,6 @@ My personal philosophy for this project was to create an pretty pages with minim
 * Customizable
 * Lightweight (&lt; 10kb)  
 * Reusable classes
-
-
-
-## Screenshots 
-
-![docs](docs-pic.png)
-</br>
-![docs](docs-pic2.png)
-</br>
-![Blog](blog1.png)
-</br>
-![Blog](blog2.png)
-
 
 
 
