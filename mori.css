@@ -12,20 +12,20 @@ h3 { font-size: 1.75em; }
 h4 { font-size: 1.5em; }
 h5 { font-size: 1.25em; }
 h6 { font-size: 1em; }
-/*code Block */
+
 pre, code {
   font-family: 'Consolas', 'Monaco', monospace; 
   background-color: #eee; 
   border: 1px solid #999; 
-  display: block;
   padding: 2px;
-  overflow: auto;
   font-size: 90%; 
-  white-space: nowrap;
-  max-width: 100%; 
+  white-space: normal; 
   box-sizing: border-box; 
+  /* Overflow */
+  overflow-x: auto; 
+  overflow-y: auto;
+  max-height: 300px; 
 }
-
 
 .inline {
   display: inline-block;
@@ -82,7 +82,6 @@ highlight {
     flex-direction: column;
     transition: all .14s ;
     display: flex;
-    overflow: hidden;
   }
 
   .contain {
@@ -468,8 +467,9 @@ input[type="text"], textarea, select {
     font-size: 16px; 
 }
 
-.button {
+button {
     padding: 15px 25px; 
+    font-size: small;
 }
 
 .grid-container {
