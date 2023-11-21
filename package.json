@@ -1,6 +1,6 @@
 {
   "name": "mori.css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A minimal, retro and clean css framework",
   "main": "mori.css",
   "scripts": {
@@ -15,7 +15,8 @@
     "retro",
     "vintage",
     "minimal",
-    "clean"
+    "clean",
+    "neo"
   ],
   "author": "Maisha",
   "license": "MIT",
