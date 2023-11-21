@@ -52,8 +52,12 @@ My personal philosophy for this project was to create an pretty pages with minim
 * Reusable classes
 
 
-
-
 ## Demo 
 
 The landing page for a starter simple blog: [Blog](https://maishathasin.github.io/mori.css/blog.html)
+
+
+### ToDo 
+- [] Some features not responsive in safari
+- [] Make it more mobile friendly
+
