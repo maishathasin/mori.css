@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/maishathasin/mori.css/issues"
   },
-  "homepage": "https://github.com/maishathasin/mori.css#readme"
+  "homepage": "https://github.com/maishathasin/mori.css#readme",
+  "dependencies": {
+    "mori.css": "^1.0.1"
+  }
 }

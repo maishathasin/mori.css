@@ -4,31 +4,14 @@ body {
   background-color: #fefafa;
   
 }
+
 /* Headings */
-h1 {
-  font-size: 3em; 
-}
-
-h2 {
-  font-size: 2em; 
-}
-
-h3 {
-  font-size: 1.75em; 
-}
-
-h4 {
-  font-size: 1.5em; 
-}
-
-h5 {
-  font-size: 1.25em; 
-}
-
-h6 {
-  font-size: 1em;
-}
-
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
 /*code Block */
 pre, code {
   font-family: 'Consolas', 'Monaco', monospace; 
@@ -64,14 +47,7 @@ highlight {
 }
 
 
-.pressable {
-  box-shadow: 4px 4px #181616;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-
-
-.block-fixed {
+.pressable,.block-fixed {
   box-shadow: 4px 4px #181616;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -98,7 +74,6 @@ highlight {
     transition: all .14s cubic-bezier(.25, .46, .45, .94);
 
   }
-
 
 
 .card-wrap {
