@@ -75,7 +75,6 @@ highlight {
 
   }
 
-
 .card-wrap {
     width: 100%;
     color: var(--black);
@@ -105,8 +104,6 @@ highlight {
 
 }
 
-
-  
 .card-thumbnail {
     width: 100%;
     height: 100%;
@@ -269,7 +266,6 @@ input[type-checkbox]:checked + .accordion-title {
 
 .dropdown:hover .dropdown-content, .dropup:hover .dropup-content {
   display: block;
-  
 }
 
 
@@ -393,14 +389,12 @@ input[type-checkbox]:checked + .accordion-title {
   color: #fff; /* Text color */
   text-align: center; 
   padding: 5px 0;
-
   /* Positioning */
   position: absolute;
   z-index: 1;
   bottom: 100%;
   left: 50%;
   margin-left: -60px;
-
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -426,3 +420,69 @@ input[type-checkbox]:checked + .accordion-title {
   line-height: 1.5;    
 }
 
+
+/*for Mobile Devices */
+@media screen and (max-width: 768px) {
+  body {
+      padding: 5px;
+  }
+
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.75em; }
+  h3 { font-size: 1.5em; }
+  h4 { font-size: 1.25em; }
+  h5 { font-size: 1.125em; }
+  h6 { font-size: 1em; }
+
+  .blog {
+      grid-template-columns: 1fr; 
+  }
+
+  .card-wrap, .contain {
+      width: auto; 
+  }
+
+  .dropdown, .dropup, .dropbtn {
+      width: auto; 
+  }
+
+  #searchBar {
+      width: 100%; 
+  }
+
+  .accordion {
+      max-width: 100%;
+  }
+
+  body, p, li {
+    font-size: 14px; 
+}
+
+/* menu Adjustments 
+.nav-menu {
+   
+}
+*/
+
+input[type="text"], textarea, select {
+    font-size: 16px; 
+}
+
+.button {
+    padding: 15px 25px; 
+}
+
+.grid-container {
+    display: block; 
+}
+
+table {
+    overflow-x: auto; 
+}
+
+.modal {
+    width: 90%; 
+}
+
+
+}
